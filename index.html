@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manas | Creative Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<!-- hey everyone -->
+      <style>
+    #tiger {
+      position: fixed;
+      font-size: 36px;
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+    }
+
+    .walking {
+      animation: walk 0.3s infinite alternate;
+    }
+
+    @keyframes walk {
+      from {
+        transform: translate(-50%, -50%) translateY(0) rotate(-5deg);
+      }
+      to {
+        transform: translate(-50%, -50%) translateY(-4px) rotate(5deg);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="tiger">🐯</div>
+
+  <script>
+    const tiger = document.getElementById("tiger");
+    let walkTimeout;
+
+    document.addEventListener("mousemove", (e) => {
+      tiger.style.left = e.clientX + "px";
+      tiger.style.top = e.clientY + "px";
+
+      tiger.classList.add("walking");
+
+      clearTimeout(walkTimeout);
+      walkTimeout = setTimeout(() => {
+        tiger.classList.remove("walking");
+      }, 100);
+    });
+  </script>
+
+
+<body>
+
+<!-- Cursor -->
+<div class="cursor"></div>
+<div class="cursor-blur"></div>
+
+<!-- Navbar -->
+<nav>
+  <h1>Manas<span>.</span></h1>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- Hero -->
+<section id="home" class="hero">
+  <h2>Hello, I’m</h2>
+  <h1><span class="typing"></span></h1>
+  <p>I design & build immersive digital experiences.</p>
+  <div class="hero-btns">
+    <a href="#projects" class="btn magnetic">Explore Work</a>
+    <a href="#contact" class="btn outline magnetic">Hire Me</a>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about">
+  <h2 class="section-title">About Me</h2>
+  <div class="glass-card">
+    <p>
+      I’m a creative developer passionate about modern UI, smooth animations,
+      and high-performance web experiences. I focus on details that make users say “wow”.
+    </p>
+  </div>
+</section>
+
+<!-- Skills -->
+<section id="skills">
+  <h2 class="section-title">Skills</h2>
+  <div class="skills">
+    <div class="skill">HTML</div>
+    <div class="skill">CSS</div>
+    <div class="skill">JavaScript</div>
+    <div class="skill">React</div>
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects">
+  <h2 class="section-title">Projects</h2>
+  <div class="projects">
+    <div class="project-card">
+      <h3>Portfolio Website</h3>
+      <p>Animated & responsive portfolio.</p>
+    </div>
+    <div class="project-card">
+      <h3>Dashboard UI</h3>
+      <p>Modern analytics dashboard.</p>
+    </div>
+    <div class="project-card">
+      <h3>Landing Page</h3>
+      <p>High-conversion landing page.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+  <h2 class="section-title">Let’s Work Together</h2>
+  <form>
+    <input type="text" placeholder="Name" required>
+    <input type="email" placeholder="Email" required>
+    <textarea placeholder="Message"></textarea>
+    <button class="btn magnetic">Send Message</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2026 Manas</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
