@@ -5,6 +5,7 @@
   --text: #ffffff;
 }
 
+/* added the scroll behaviour */
 html{
   scroll-behavior: smooth;
 }
